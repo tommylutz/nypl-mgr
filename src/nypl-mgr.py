@@ -180,8 +180,6 @@ def main():
         regex_lt = re.compile("lt\" value=\"([^\"]+)\"")
         lt_var = regex_lt.findall(r.text)[0]
         logging.debug("lt var: %s"%(pformat(lt_var)))
-        #<input type="hidden" name="lt" value="_c7333346D-AA42-438E-2ECF-2541B6660B14_k84D5F213-1294-276D-A170-DD4CD5206D2B" />
-        #<input type="hidden" name="_eventId" value="submit" />
         
         r = s.post("https://catalog.nypl.org/iii/cas/login", 
             data = {
